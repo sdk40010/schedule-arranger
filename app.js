@@ -24,7 +24,7 @@ passport.use(new GitHubStrategy({
   clientSecret: GITHUB_CLIENT_SECRET,
   callbackURL: 'http://localhost:8000/auth/github/callback'
 },
-  function (accessToken, refresToken, profile, done) {
+  function (accessToken, refreshToken, profile, done) {
     process.nextTick(function () {
       return done(null, profile);
     });
